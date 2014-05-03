@@ -7,16 +7,27 @@ print:
 
 thumb:
 	inkscape -f piraten.svg 	\
-		--export-width=650 	\
+		--export-width=630 	\
+		--export-height=735 	\
 		--export-png=/tmp/piraten.png
 
 	convert /tmp/piraten.png 	\
 		-background white 	\
 		-flatten 		\
 		-gravity center 	\
-		-extent 662x770 	\
+		-extent 640x745 	\
 		-border 1x1 		\
 		-bordercolor "#AAA" 	\
 		./thumb.png
 
 	rm /tmp/piraten.png
+
+	convert ./print-2x2.pdf 	\
+		-background white 	\
+		-flatten 		\
+		-resize 630x892		\
+		-gravity center 	\
+		-extent 640x902 	\
+		-border 1x1 		\
+		-bordercolor "#AAA" 	\
+		./thumb-2x2.png
