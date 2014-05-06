@@ -1,5 +1,6 @@
-default:
+all:
 	make print
+	make thumb
 
 print:
 	pdflatex --halt-on-error printa.tex > /dev/null
@@ -11,15 +12,15 @@ print-2x3:
 
 thumb:
 	inkscape -f piraten.svg 	\
-		--export-width=630 	\
-		--export-height=735 	\
+		--export-width=504 	\
+		--export-height=588 	\
 		--export-png=/tmp/piraten.png
 
 	convert /tmp/piraten.png 	\
 		-background white 	\
 		-flatten 		\
 		-gravity center 	\
-		-extent 640x745 	\
+		-extent 514x598 	\
 		-border 1x1 		\
 		-bordercolor "#AAA" 	\
 		./thumb.png
@@ -29,9 +30,9 @@ thumb:
 	convert ./print-2x2.pdf 	\
 		-background white 	\
 		-flatten 		\
-		-resize 630x892		\
+		-resize 504x713		\
 		-gravity center 	\
-		-extent 640x902 	\
+		-extent 514x723 	\
 		-border 1x1 		\
 		-bordercolor "#AAA" 	\
 		./thumb-2x2.png
