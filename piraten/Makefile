@@ -5,6 +5,10 @@ print:
 	pdflatex --halt-on-error printa.tex > /dev/null
 	pdflatex --halt-on-error print-2x2.tex > /dev/null
 
+print-2x3:
+	pdflatex --halt-on-error printa-2x3.tex > /dev/null
+	pdflatex --halt-on-error print-2x3.tex > /dev/null
+
 thumb:
 	inkscape -f piraten.svg 	\
 		--export-width=630 	\
