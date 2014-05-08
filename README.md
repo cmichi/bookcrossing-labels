@@ -28,5 +28,5 @@ Click on image to download the PDF.
 	Valerie Kast
 	Michael Mueller, http://micha.elmueller.net
 
-	The visualization is licensed under the Creative Commons Attribution
+	The labels are licensed under the Creative Commons Attribution
 	4.0 International license: http://creativecommons.org/licenses/by/4.0/.
